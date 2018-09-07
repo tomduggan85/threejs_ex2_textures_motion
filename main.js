@@ -1,11 +1,11 @@
 
-/* Assets */
+/* Image URLs */
 
 const earthImageUrl = 'https://res.cloudinary.com/tomduggan/image/upload/v1535219098/earth.jpg';
 const moonImageUrl = 'https://res.cloudinary.com/tomduggan/image/upload/v1535219207/moon.jpg';
 const marsImageUrl = 'https://res.cloudinary.com/tomduggan/image/upload/v1535219359/mars.jpg';
 
-/* START setup */
+/* Start setup */
 
 const screenWidth = window.innerWidth;
 const screenHeight = window.innerHeight;
@@ -27,7 +27,7 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(screenWidth, screenHeight);
 document.body.appendChild(renderer.domElement);
 
-/* END setup */
+/* End setup */
 
 const sun = new THREE.Mesh(
   new THREE.SphereGeometry(0.3, 30, 30), 
@@ -67,6 +67,7 @@ const light = new THREE.PointLight(0xffffff, 1, 5000);
 scene.add(light);
 
 
+/* Draw loop */
 function draw() {
   requestAnimationFrame(draw);
   
